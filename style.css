@@ -1,0 +1,150 @@
+:root {
+    /* Primary Color */
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --bright-blue-opacity: hsla(245, 75%, 52%, 0.7);
+
+    /* Neutral Colors*/
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+    --dark-blue-shadow: hsla(245, 75%, 52%, 0.1);
+    --white: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 16px;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-image: url("images/pattern-background-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-y: -100px;
+    background-color: var(--pale-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.attribution {
+    position: absolute;
+    bottom: 10px;
+}
+
+.container {
+    width: 370px;
+    height: 570px;
+    background-color: var(--white);
+    border-radius: 20px;
+    box-shadow: 0 10px 20px 0px var(--dark-blue-shadow);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.container .header {
+    width: 100%;
+    height: 180px;
+}
+
+.container .header img {
+    width: 100%;
+    height: 100%;
+}
+
+.container .body {
+    width: 100%;
+    padding: 30px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container .body h2 {
+    font-size: 25px;
+    font-weight: 900;
+    color: var(--dark-blue);
+}
+
+.container .body p {
+    font-size: 14px;
+    color: var(--desaturated-blue);
+    text-align: center;
+    padding: 20px;
+}
+
+.plan {
+    position: relative;
+    width: 100%;
+    height: 80px;
+    background-color: var(--very-pale-blue);
+    display: flex;
+    padding: 20px;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.plan .plan-type {
+    padding: 0 20px;   
+}
+
+.plan button {
+    position: absolute;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    background: none;
+    text-decoration: underline;
+    color: var(--bright-blue);
+    cursor: pointer;
+    right: 20px;
+}
+
+.plan button:hover {
+    color: var(--bright-blue-opacity);
+    text-decoration: none;
+}
+
+.body .payment-btn {
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    background-color: var(--bright-blue);
+    box-shadow: 0 10px 20px 0px hsla(245, 75%, 52%, 0.2);
+    font-weight: 500;
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+}
+
+.body .payment-btn:hover {
+    background-color: var(--bright-blue-opacity);
+}
+
+.body .cancel-btn {
+    font-size: 14px;
+    font-weight: bold;
+    background: none;
+    border: none;
+    color: var(--desaturated-blue);
+    cursor: pointer;
+}
+
+.body .cancel-btn:hover {
+    color: var(--dark-blue)
+}
+
+@media (max-width: 375px) {
+    .container {
+        width: 350px;
+    }
+}
